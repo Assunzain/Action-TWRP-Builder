@@ -14,15 +14,15 @@ on:
       DEVICE_TREE_URL:
         description: 'DEVICE_TREE_URL'
         required: true
-        default: 'https://github.com/Assunzain/TWRP'
+        default: 'https://github.com/Assunzain/twrp_asus_X01AD/tree/pie'
       DEVICE_TREE_BRANCH:
         description: 'DEVICE_TREE_BRANCH'
         required: true
-        default: '1'
+        default: 'pie'
       DEVICE_PATH:
         description: 'DEVICE_PATH'
         required: true
-        default: 'device/ASUS/X01AD'
+        default: 'device/asus/X01AD'
       COMMON_TREE_URL:
         description: 'COMMON_TREE_URL (if no common tree, leave blank)'
         required: false
