@@ -60,6 +60,7 @@ jobs:
         echo "Device Name: ${{ github.event.inputs.DEVICE_NAME }}"
         echo "Makefile Name: ${{ github.event.inputs.MAKEFILE_NAME }}"
         echo "Build Target: ${{ github.event.inputs.BUILD_TARGET }}.img"
+        echo "Build Target: ${{ github.event.inputs.BUILD_TARGET }}.zip"
         echo "::endgroup::"
  
     # You might want to Checkout your repo first, but not mandatory
