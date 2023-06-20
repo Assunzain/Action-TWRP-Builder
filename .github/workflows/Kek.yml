@@ -10,11 +10,11 @@ on:
       LIBRARY_URL:
         description: 'LIBRARY_URL'
         required: true
-        default: 'https://github.com/BatikRecovery/br_manifest'
+        default: 'https://github.com/SHRP/manifest'
       LIBRARY_BRANCH:
         description: 'LIBRARY_BRANCH'
         required: true
-        default: 'android-9.0'
+        default: 'v3_11.0'
       DEVICE_URL:
         description: 'DEVICE_URL'
         required: true
@@ -23,6 +23,7 @@ on:
         description: 'DEVICE_BRANCH'
         required: true
         default: '1'
+
       DEVICE_PATH:
         description: 'DEVICE_PATH'
         required: true
@@ -109,6 +110,9 @@ jobs:
           workspace/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/${{ github.event.inputs.DEVICE_TYPE }}.img
         name: ${{ github.event.inputs.DEVICE_NAME }}-${{ github.run_id }}
         tag_name: ${{ github.run_id }}
-        body: Recovery for ${{ github.event.inputs.DEVICE_NAME }}
+        body: 
+          Manifest: ${{ github.event.inputs.MANIFEST_BRANCH }}
+          Device: ${{ github.event.inputs.DEVICE_NAME }}
+          Target: ${{ github.event.inputs.BUILD_TARGET }}
       env:
         GITHUB_TOKEN: ${{ secrets.TEST }}
