@@ -1,4 +1,4 @@
-name: Recovery Build Z
+name: Recovery Batik Build
 
 on:
   workflow_dispatch:
